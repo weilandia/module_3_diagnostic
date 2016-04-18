@@ -4,11 +4,11 @@ RSpec.feature "Stories", type: :feature do
   scenario "test" do
     visit "/"
 
-    fill_in "search for stations", with: 80203
-    VCR.use_cassettes("cassette.name") do
+    fill_in "search_zip", with: 80203
+    VCR.use_cassette("cassette.name") do
       click_on "Locate"
       expect(current_path).to eq(search_path)
-      within "div#results" do
+      within "div.results" do
         expect(page).to have_css("div#location-1")
         expect(page).to have_css("div#location-10")
       end

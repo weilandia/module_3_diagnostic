@@ -20,9 +20,12 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'vcr'
-  gem 'webmock'
   gem 'launchy'
   gem 'shoulda-matchers', require: false
+end
+
+group :test do
+  gem 'webmock'
 end
 
 group :development do
