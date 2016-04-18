@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Stories", type: :feature do
+RSpec.feature "User searcher", type: :feature do
   scenario "test" do
     visit "/"
 
@@ -9,8 +9,8 @@ RSpec.feature "Stories", type: :feature do
       click_on "Locate"
       expect(current_path).to eq(search_path)
       within "div.results" do
-        expect(page).to have_css("div#location-1")
-        expect(page).to have_css("div#location-10")
+        expect(page).to have_css("tr#location-1")
+        expect(page).to have_css("tr#location-10")
       end
     end
   end

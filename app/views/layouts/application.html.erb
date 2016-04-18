@@ -22,6 +22,7 @@
           <%= form_tag :search, method: :get, class: "form-inline" do %>
             <div class="form-group search-field">
               <%= text_field_tag :location, "Search by zip...", class: "form-control", id: "search_zip" %>
+              <%= text_field_tag :distance, "How far?", class: "form-control", id: "distance" %>
               <%= submit_tag "Locate", class: "btn btn-primary" %>
             </div>
           <% end %>
