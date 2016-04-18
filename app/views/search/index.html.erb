@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h3>Search Results</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 results">
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <% @locations.scope_elec_and_prop.sort_by(&:distance)[0..10].each_with_index do |station, index| %>
+            <tr id="location-<%= index %>">
+              <td><%= station.name %></td>
+              <td><%= station.distance %></td>
+              <td><%= station.fuel_type %></td>
+              <td><%= station.address %></td>
+              <td><%= station.access_times %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

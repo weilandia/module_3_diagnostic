@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "therubyracer"
+gem "twitter-bootstrap-rails"
 gem 'faraday'
 gem "less-rails"
 
@@ -21,6 +22,10 @@ group :development, :test do
   gem 'vcr'
   gem 'launchy'
   gem 'shoulda-matchers', require: false
+end
+
+group :test do
+  gem 'webmock'
 end
 
 group :development do
